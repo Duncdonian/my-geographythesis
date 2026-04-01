@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Military Mobilization Analysis | Thesis Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dark-theme">
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i data-lucide="shield-check" class="icon-accent"></i>
+                <h1>Military<span>Mobilization</span></h1>
+            </div>
+            <p class="subtitle">Comparison of National Security vs. Natural Disaster Personnel Requirements</p>
+        </header>
+
+        <main>
+            <aside class="controls-sidebar glass">
+                <section class="control-group">
+                    <h3><i data-lucide="filter"></i> Parameters</h3>
+                    
+                    <div class="field">
+                        <label>National Security Threat</label>
+                        <select id="threat-select">
+                            <option value="all">All Threats</option>
+                            <!-- Options populated via JS -->
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Natural Disaster Type</label>
+                        <select id="disaster-select">
+                            <option value="all">All Disasters</option>
+                            <!-- Options populated via JS -->
+                        </select>
+                    </div>
+                </section>
+
+                <section class="control-group">
+                    <h3><i data-lucide="users"></i> Comparison (Up to 3)</h3>
+                    
+                    <div class="field country-field">
+                        <label class="label-c1">Country 1</label>
+                        <select id="country-1" class="country-select">
+                            <option value="">Select Country...</option>
+                        </select>
+                    </div>
+
+                    <div class="field country-field">
+                        <label class="label-c2">Country 2</label>
+                        <select id="country-2" class="country-select">
+                            <option value="">None</option>
+                        </select>
+                    </div>
+
+                    <div class="field country-field">
+                        <label class="label-c3">Country 3</label>
+                        <select id="country-3" class="country-select">
+                            <option value="">None</option>
+                        </select>
+                    </div>
+                </section>
+
+                <div class="legend glass">
+                    <div class="legend-item">
+                        <span class="dot actual"></span>
+                        <span>Historical Data</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="dot imputed"></span>
+                        <span>Subregion Imputed</span>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="visualization-area">
+                <div class="chart-container glass">
+                    <canvas id="mobilizationChart"></canvas>
+                </div>
+                
+                <div class="info-cards" id="comparison-cards">
+                    <!-- Dynamic comparison cards -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Military Mobilization Thesis Project | Data sources: EMDAT, World Development Indicators, Survey 2026</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
