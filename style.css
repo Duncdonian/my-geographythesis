@@ -159,10 +159,10 @@ select:focus {
     gap: 2rem;
 }
 
-.chart-container {
+.chart-box {
     padding: 2rem;
     flex-grow: 1;
-    min-height: 500px;
+    min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -245,8 +245,28 @@ footer {
 }
 
 /* Responsive */
+
+.detailed-breakdown {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.chart-container-small {
+    height: 300px;
+    margin-top: 1rem;
+}
+
 @media (max-width: 1024px) {
     main {
+        grid-template-columns: 1fr;
+    }
+    .grid-2 {
         grid-template-columns: 1fr;
     }
 }

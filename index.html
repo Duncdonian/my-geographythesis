@@ -81,12 +81,31 @@
             </aside>
 
             <section class="visualization-area">
-                <div class="chart-container glass">
+                <!-- Scatter Plot Case -->
+                <div class="chart-box glass animate-slide-up">
                     <canvas id="mobilizationChart"></canvas>
                 </div>
                 
                 <div class="info-cards" id="comparison-cards">
                     <!-- Dynamic comparison cards -->
+                </div>
+
+                <!-- Detailed Bar Chart Comparison -->
+                <div class="detailed-breakdown animate-slide-up">
+                    <div class="grid-2">
+                        <div class="card glass">
+                            <h3>National Security Threat Profiles (%)</h3>
+                            <div class="chart-container-small">
+                                <canvas id="threatBarChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="card glass">
+                            <h3>Natural Disaster Response Requirements (%)</h3>
+                            <div class="chart-container-small">
+                                <canvas id="disasterBarChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
